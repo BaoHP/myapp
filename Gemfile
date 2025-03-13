@@ -65,4 +65,3 @@ end
 gem "devise"
 gem "tailwindcss-rails", "~> 4.2"
 gem "byebug"
-
