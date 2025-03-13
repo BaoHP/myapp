@@ -82,7 +82,7 @@ production:
   primary: &primary_production
     <<: *default
     url: <%= ENV["DATABASE_URL"] %>
-    database: myapp_production_9m4l
+    database:  <%= ENV["DATABASE_NAME"] %>
     username: <%= ENV["MYAPP_DATABASE_USERNAME"] %>
     password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
   cache:
