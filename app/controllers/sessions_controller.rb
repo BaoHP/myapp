@@ -4,7 +4,6 @@ class SessionsController < Devise::SessionsController
   end
 
   def create
-    byebug
     super
   end
 end
