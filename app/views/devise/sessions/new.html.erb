@@ -17,9 +17,13 @@
       <div>
         <div class="flex items-center justify-between">
           <%= f.label :password, "Password", class: "block text-sm/6 font-medium text-gray-900" %>
-          <div class="text-sm">
+          <%
+=begin%>
+ <div class="text-sm">
             <%= link_to "Forgot password?", new_password_path(resource_name), class: "font-semibold text-indigo-600 hover:text-indigo-500" %>
-          </div>
+          </div> 
+<%
+=end%>
         </div>
         <div class="mt-2">
           <%= f.password_field :password, required: true, autocomplete: "current-password",
