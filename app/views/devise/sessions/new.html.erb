@@ -1,11 +1,11 @@
 <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-    <%= image_tag "https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600", class: "mx-auto h-10 w-auto", alt: "Your Company" %>
-    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+    <%= image_tag "jewelry.png", class: "mx-auto h-10 w-auto", alt: "Your Company" %>
+    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in</h2>
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), method: :post, class: "space-y-6") do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), method: :post, html: { class: "space-y-6" }) do |f| %>
       <div>
         <%= f.label :email, "Email address", class: "block text-sm/6 font-medium text-gray-900" %>
         <div class="mt-2">
@@ -32,9 +32,13 @@
       </div>
     <% end %>
 
-    <p class="mt-10 text-center text-sm/6 text-gray-500">
+    <%
+=begin%>
+ <p class="mt-10 text-center text-sm/6 text-gray-500">
       Not a member?
       <%= link_to "Start a 14 day free trial", new_registration_path(resource_name), class: "font-semibold text-indigo-600 hover:text-indigo-500" %>
-    </p>
+    </p> 
+<%
+=end%>
   </div>
 </div>
