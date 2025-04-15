@@ -9,8 +9,7 @@
 #   end
 #
 #
-# User.create!(
-#   email: "admin@gmail.com",
-#   password: "password",
-#   password_confirmation: "password"
-# )
+User.find_or_create_by!(email: "hpb13172gmail.com") do |user|
+  user.password = "password",
+  user.password_confirmation =  "password"
+end
