@@ -4,13 +4,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def index
-    begin
-      1 / 0
-    rescue ZeroDivisionError => exception
-      Sentry.capture_exception(exception)
-    end
-
-    Sentry.capture_message("test message")
     render "home/index"
   end
 end
