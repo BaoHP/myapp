@@ -4,13 +4,6 @@ class SessionsController < Devise::SessionsController
   end
 
   def destroy
-    begin
-      1 / 0
-    rescue ZeroDivisionError => exception
-      Sentry.capture_exception(exception)
-    end
-
-    Sentry.capture_message("test message")
     super
   end
 end
