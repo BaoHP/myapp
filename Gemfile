@@ -63,7 +63,7 @@ group :test do
 end
 
 gem "devise"
-gem "tailwindcss-rails", "~> 4.2"
+gem "tailwindcss-rails", "~> 4.4"
 gem "byebug"
 
 gem "stackprof"
